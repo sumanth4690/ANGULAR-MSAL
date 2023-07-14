@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">FULLNAME</th>
+                <th scope="col">MAIL</th>
+                <th scope="col">SURNAME</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let users of getUsers">
+                <td>{{ users.displayName }}</td>
+                <td>{{ users.mail }}</td>
+                <td>@{{ users.surname }}</td>
+              </tr>
+            </tbody>
+            </table>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
+

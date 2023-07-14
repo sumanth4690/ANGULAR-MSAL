@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-dark">
+  <div class="container-fluid">
+      <a
+      class="navbar-brand me-2"
+      href="https://developer.microsoft.com/en-us/graph/graph-explorer"
+    >
+      <img
+        src="./../assets/images/microsoft.png"
+        height="35px"
+        alt="microsoft"
+        loading="lazy"
+        style="border-radius: 15%"
+      />
+    </a>
+    <span>
+<button class="btn btn-warning me-2" routerLink='profile' *ngIf="isLoggedIn()">profile</button>
+<button class="btn btn-warning me-2" [routerLink]='["/users"]'*ngIf="isLoggedIn()">All Users</button>
+<button class="btn btn-warning" (click)="logIn()" *ngIf="!isLoggedIn()">
+  SIGN IN
+</button>
+<button (click)="logOut()" *ngIf="isLoggedIn()">SIGN OUT</button>
+  </span></div>
+</nav>
+<router-outlet></router-outlet>

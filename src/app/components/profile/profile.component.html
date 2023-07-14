@@ -1,0 +1,18 @@
+<div class="row d-flex justify-content-center">
+  <div class="col7 mt-4">
+    <div *ngIf="getData">
+      <div class="card mt-4 rounded">
+        <div class="text-center" style="margin-top: -60px">
+          <img [src]="profilePic" width="200" class="rounded-circle" />
+        </div>
+        <div class="text-center">
+          <h5>{{ getData.displayName }}</h5>
+          <span>{{ getData.mail }}</span>
+          <div class="px-4 mt-1">
+            <p class="fonts">{{ getData.surname }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
